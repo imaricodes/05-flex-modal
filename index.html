@@ -8,13 +8,30 @@
   <title>Modal</title>
 </head>
 <body>
+  <!-- 'modal' div a flex item (body is a flex containter) AND a flex container -->
   <div class="modal">
-    <div class="icon">!</div>
-    <div class="header">Are you sure you want to do that?</div>
-    <div class="close-button">✖</div>
-    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
-    <button class="continue">Continue</button>
-    <button class="cancel">Cancel</button>
+<!-- icon does not need its own container. It is a flex item becasue modal is a flex container -->
+    <div class="icon-container">
+      <div class="icon">!</div>
+    </div>
+      
+    <!-- solution calls this 'container'. Solution did not change flex direction to a column like I did. Changing the modal to a flex container is enough. Also there is no styling on the container div in the solution, so why does it have a class? Not sure, but since ITS container is a flex container, this div container is a flex item.-->
+    <div class="main-content-container">
+<!-- I did not need to wrap the header and close button div in another div. The solution changed the original by moving the close button into the header div and then that div was made a flex container -->
+      <div class="header-close-container"> 
+        <div class="header">Are you sure you want to do that?</div>
+        <div class="close-button">✖</div>
+      </div>
+<!-- this text section is same a solutoin and original file -->
+      <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+      <!-- solution did not wrap these two buttons in a container, just left it as original. I wrapped the buttons in container thinking that was neccessary to be inline with each other. Forgot that <button> IS an inline element!-->
+    <div class="button-container">
+      <button class="continue">Continue</button>
+      <button class="cancel">Cancel</button>
+
+    </div>
+      
+  </div>
   </div>
 </body>
 </html>
