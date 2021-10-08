@@ -23,7 +23,7 @@ I did far too much to get the desired results. Here are my main learning points:
 
 1. Buttons are in-line elements. If written one after another the html, they will appear next to each other on the same line (in-line elements).
 
-2. Each block elements in a sequence will, by default, begin a new line. Or another way to describe this is that they will be stacked vertically.
+2. Each block elements in a sequence will, by default, begin a new line. Or another way to describe this is that they will be rendered vertically - top down. If those elements are in a flexbox, thy wlll behave as flex items, orienting themselve in a row or column depending on the display property of the flex container.
 
 3. A div inside a flex container becomes an item and will be laid out accordingly.
 
